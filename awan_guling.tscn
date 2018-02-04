@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://awan_guling.gd" type="Script" id=1]
+[ext_resource path="res://sprites/platformerGraphicsDeluxe_Updated/Items/cloud1.png" type="Texture" id=2]
+[ext_resource path="res://sprites/platformerGraphicsDeluxe_Updated/Items/cloud3.png" type="Texture" id=3]
+[ext_resource path="res://sprites/platformerGraphicsDeluxe_Updated/Items/cloud2.png" type="Texture" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 89.7297, 136.5 )
+
+[node name="awan_guling" type="KinematicBody2D" index="0"]
+
+position = Vector2( 102, 42 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+texture = ExtResource( 2 )
+
+[node name="Sprite2" type="Sprite" parent="." index="1"]
+
+position = Vector2( 72, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite4" type="Sprite" parent="." index="2"]
+
+position = Vector2( 91.9315, 45.3511 )
+rotation = 3.14159
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Sprite3" type="Sprite" parent="." index="3"]
+
+position = Vector2( 1.53593, 47.4127 )
+rotation = 3.14159
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="4"]
+
+position = Vector2( 46.6717, 40 )
+scale = Vector2( 1.15035, 0.21978 )
+shape = SubResource( 1 )
+
+[node name="Timer" type="Timer" parent="." index="5"]
+
+process_mode = 1
+wait_time = 3.0
+one_shot = false
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+
+
