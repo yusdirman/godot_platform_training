@@ -15,7 +15,7 @@
 [ext_resource path="res://sprites/platformerGraphicsDeluxe_Updated/Player/p1_walk/PNG/p1_walk10.png" type="Texture" id=13]
 [ext_resource path="res://sprites/platformerGraphicsDeluxe_Updated/Player/p1_walk/PNG/p1_walk11.png" type="Texture" id=14]
 
-[sub_resource type="SpriteFrames" id=2]
+[sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
 "frames": [ ExtResource( 2 ) ],
@@ -34,12 +34,12 @@ animations = [ {
 "speed": 20.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
 extents = Vector2( 32, 64 )
 
-[node name="KinematicBody2D" type="KinematicBody2D"]
+[node name="KinematicBody2D" type="KinematicBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 1
@@ -50,7 +50,7 @@ script = ExtResource( 1 )
 [node name="Sprite" type="AnimatedSprite" parent="." index="0"]
 
 scale = Vector2( 1.2549, 1.2549 )
-frames = SubResource( 2 )
+frames = SubResource( 1 )
 animation = "stand"
 playing = true
 
@@ -59,11 +59,11 @@ playing = true
 anchor_mode = 1
 rotating = false
 current = true
-zoom = Vector2( 1, 1 )
+zoom = Vector2( 1.5, 1.5 )
 limit_left = 0
-limit_top = -1000
+limit_top = 0
 limit_right = 10000
-limit_bottom = 1000
+limit_bottom = 768
 limit_smoothed = false
 drag_margin_h_enabled = true
 drag_margin_v_enabled = true
@@ -85,6 +85,6 @@ _sections_unfolded = [ "Limit", "Smoothing" ]
 visible = false
 position = Vector2( 0, 2.38419e-07 )
 scale = Vector2( 1, 0.955224 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 

@@ -1,11 +1,13 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://sprites/parallax.png" type="Texture" id=1]
-[ext_resource path="res://player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://land_platform.tscn" type="PackedScene" id=3]
-[ext_resource path="res://floating_dock.tscn" type="PackedScene" id=4]
-[ext_resource path="res://awan_guling.tscn" type="PackedScene" id=5]
-[ext_resource path="res://boss.tscn" type="PackedScene" id=6]
+[ext_resource path="res://rakyat.tscn" type="PackedScene" id=2]
+[ext_resource path="res://snowy_floor.tscn" type="PackedScene" id=3]
+[ext_resource path="res://player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://land_platform.tscn" type="PackedScene" id=5]
+[ext_resource path="res://floating_dock.tscn" type="PackedScene" id=6]
+[ext_resource path="res://awan_guling.tscn" type="PackedScene" id=7]
+[ext_resource path="res://boss.tscn" type="PackedScene" id=8]
 
 [node name="world" type="Node2D" index="0"]
 
@@ -26,14 +28,14 @@ _sections_unfolded = [ "Pause" ]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" index="0"]
 
-motion_scale = Vector2( 1, 1 )
-motion_offset = Vector2( 2, 2 )
+motion_scale = Vector2( 0.5, 0.5 )
+motion_offset = Vector2( 1, 1 )
 motion_mirroring = Vector2( 0, 0 )
 _sections_unfolded = [ "Motion", "Visibility" ]
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer" index="0"]
 
-position = Vector2( 3802, 322 )
+position = Vector2( 3783.45, 247.819 )
 rotation = 0.00174533
 scale = Vector2( 1, 1.39844 )
 texture = ExtResource( 1 )
@@ -41,152 +43,160 @@ region_enabled = true
 region_rect = Rect2( 1, 1, 8056, 768 )
 _sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Transform", "Visibility", "Z Index" ]
 
-[node name="player1" parent="." index="1" instance=ExtResource( 2 )]
+[node name="Node2D" parent="ParallaxBackground/ParallaxLayer" index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 3215.95, 230.354 )
+
+[node name="Node2D" parent="ParallaxBackground/ParallaxLayer/Node2D" index="1" instance=ExtResource( 3 )]
+
+position = Vector2( -3467.01, 464.991 )
+
+[node name="player1" parent="." index="1" instance=ExtResource( 4 )]
 
 position = Vector2( 62.7349, 507.079 )
 _sections_unfolded = [ "Z Index" ]
 
-[node name="log_bridge" parent="." index="2" instance=ExtResource( 3 )]
+[node name="log_bridge" parent="." index="2" instance=ExtResource( 5 )]
 
 light_mask = 3
 position = Vector2( 4052, 192 )
 _sections_unfolded = [ "Visibility", "Z Index" ]
 
-[node name="log_bridge4" parent="." index="3" instance=ExtResource( 3 )]
+[node name="log_bridge4" parent="." index="3" instance=ExtResource( 5 )]
 
 light_mask = 3
 position = Vector2( 4382, 42 )
 _sections_unfolded = [ "Visibility", "Z Index" ]
 
-[node name="log_bridge2" parent="." index="4" instance=ExtResource( 3 )]
+[node name="log_bridge2" parent="." index="4" instance=ExtResource( 5 )]
 
 light_mask = 3
 position = Vector2( 4162, 442 )
 _sections_unfolded = [ "Visibility", "Z Index" ]
 
-[node name="log_bridge3" parent="." index="5" instance=ExtResource( 3 )]
+[node name="log_bridge3" parent="." index="5" instance=ExtResource( 5 )]
 
 light_mask = 3
 position = Vector2( 4342, 692 )
 _sections_unfolded = [ "Visibility", "Z Index" ]
 
-[node name="floating_dock" parent="." index="6" instance=ExtResource( 4 )]
+[node name="floating_dock" parent="." index="6" instance=ExtResource( 6 )]
 
 position = Vector2( -168, 642 )
 scale = Vector2( 0.96875, 1 )
 
-[node name="floating_dock2" parent="." index="7" instance=ExtResource( 4 )]
+[node name="floating_dock2" parent="." index="7" instance=ExtResource( 6 )]
 
 position = Vector2( 162, 642 )
 scale = Vector2( 0.96875, 1 )
 
-[node name="floating_dock3" parent="." index="8" instance=ExtResource( 4 )]
+[node name="floating_dock3" parent="." index="8" instance=ExtResource( 6 )]
 
 position = Vector2( 992, 472 )
 scale = Vector2( 0.96875, 1 )
 
-[node name="floating_dock4" parent="." index="9" instance=ExtResource( 4 )]
+[node name="floating_dock4" parent="." index="9" instance=ExtResource( 6 )]
 
 position = Vector2( 1862, 462 )
 scale = Vector2( 0.96875, 1 )
 
-[node name="floating_dock5" parent="." index="10" instance=ExtResource( 4 )]
+[node name="floating_dock5" parent="." index="10" instance=ExtResource( 6 )]
 
 position = Vector2( 2842, 652 )
 scale = Vector2( 0.96875, 1 )
 
-[node name="floating_dock6" parent="." index="11" instance=ExtResource( 4 )]
+[node name="floating_dock6" parent="." index="11" instance=ExtResource( 6 )]
 
 position = Vector2( 3692, 382 )
 scale = Vector2( 0.96875, 1 )
 
-[node name="floating_dock7" parent="." index="12" instance=ExtResource( 4 )]
+[node name="floating_dock7" parent="." index="12" instance=ExtResource( 6 )]
 
 position = Vector2( 4762, 722 )
 scale = Vector2( 0.96875, 1 )
 
-[node name="floating_dock8" parent="." index="13" instance=ExtResource( 4 )]
+[node name="floating_dock8" parent="." index="13" instance=ExtResource( 6 )]
 
 position = Vector2( 5092, 722 )
 scale = Vector2( 0.96875, 1 )
 
-[node name="floating_dock9" parent="." index="14" instance=ExtResource( 4 )]
+[node name="floating_dock9" parent="." index="14" instance=ExtResource( 6 )]
 
 position = Vector2( 5422, 722 )
 scale = Vector2( 0.96875, 1 )
 
-[node name="floating_dock10" parent="." index="15" instance=ExtResource( 4 )]
+[node name="floating_dock10" parent="." index="15" instance=ExtResource( 6 )]
 
 position = Vector2( 5742, 722 )
 scale = Vector2( 0.96875, 1 )
 
-[node name="floating_dock11" parent="." index="16" instance=ExtResource( 4 )]
+[node name="floating_dock11" parent="." index="16" instance=ExtResource( 6 )]
 
 position = Vector2( 6072, 722 )
 scale = Vector2( 0.96875, 1 )
 
-[node name="floating_dock12" parent="." index="17" instance=ExtResource( 4 )]
+[node name="floating_dock12" parent="." index="17" instance=ExtResource( 6 )]
 
 position = Vector2( 6392, 722 )
 scale = Vector2( 0.96875, 1 )
 
-[node name="floating_dock13" parent="." index="18" instance=ExtResource( 4 )]
+[node name="floating_dock13" parent="." index="18" instance=ExtResource( 6 )]
 
 position = Vector2( 6722, 722 )
 scale = Vector2( 0.96875, 1 )
 
-[node name="floating_dock14" parent="." index="19" instance=ExtResource( 4 )]
+[node name="floating_dock14" parent="." index="19" instance=ExtResource( 6 )]
 
 position = Vector2( 7052, 722 )
 scale = Vector2( 0.96875, 1 )
 
-[node name="floating_dock15" parent="." index="20" instance=ExtResource( 4 )]
+[node name="floating_dock15" parent="." index="20" instance=ExtResource( 6 )]
 
 position = Vector2( 7382, 722 )
 scale = Vector2( 0.96875, 1 )
 
-[node name="floating_dock16" parent="." index="21" instance=ExtResource( 4 )]
+[node name="floating_dock16" parent="." index="21" instance=ExtResource( 6 )]
 
 position = Vector2( 7702, 440.867 )
 rotation = 1.5708
 scale = Vector2( 0.96875, 1 )
 _sections_unfolded = [ "Material", "Transform" ]
 
-[node name="floating_dock18" parent="." index="22" instance=ExtResource( 4 )]
+[node name="floating_dock18" parent="." index="22" instance=ExtResource( 6 )]
 
 position = Vector2( 7700, -181.759 )
 rotation = 1.5708
 scale = Vector2( 0.96875, 1 )
 _sections_unfolded = [ "Material", "Transform" ]
 
-[node name="floating_dock17" parent="." index="23" instance=ExtResource( 4 )]
+[node name="floating_dock17" parent="." index="23" instance=ExtResource( 6 )]
 
 position = Vector2( 7701, 135.711 )
 rotation = 1.5708
 scale = Vector2( 0.96875, 1 )
 _sections_unfolded = [ "Material", "Transform" ]
 
-[node name="awan_guling" parent="." index="24" instance=ExtResource( 5 )]
+[node name="awan_guling" parent="." index="24" instance=ExtResource( 7 )]
 
 position = Vector2( 622, 522 )
 scale = Vector2( 1.4375, 1.39844 )
 
-[node name="awan_guling2" parent="." index="25" instance=ExtResource( 5 )]
+[node name="awan_guling2" parent="." index="25" instance=ExtResource( 7 )]
 
 position = Vector2( 1412, 312 )
 scale = Vector2( 1.4375, 1.39844 )
 
-[node name="awan_guling3" parent="." index="26" instance=ExtResource( 5 )]
+[node name="awan_guling3" parent="." index="26" instance=ExtResource( 7 )]
 
 position = Vector2( 2282, 602 )
 scale = Vector2( 1.4375, 1.39844 )
 
-[node name="awan_guling4" parent="." index="27" instance=ExtResource( 5 )]
+[node name="awan_guling4" parent="." index="27" instance=ExtResource( 7 )]
 
 position = Vector2( 3312, 482 )
 scale = Vector2( 1.4375, 1.39844 )
 
-[node name="boss" parent="." index="28" instance=ExtResource( 6 )]
+[node name="boss" parent="." index="28" instance=ExtResource( 8 )]
 
 position = Vector2( 6902.13, 247.411 )
 rotation = 0.00174533

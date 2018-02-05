@@ -1,0 +1,59 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://sprites/platform.land.png" type="Texture" id=1]
+[ext_resource path="res://sprites/platformerGraphicsDeluxe_Updated/preview.png" type="Texture" id=2]
+[ext_resource path="res://sprites/platformerGraphicsDeluxe_Updated/Vector/characters.svg" type="Texture" id=3]
+
+[node name="Node2D" type="Node2D" index="0"]
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+position = Vector2( 111.271, -61.4512 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 42, 122, 390, 380 )
+_sections_unfolded = [ "Region" ]
+
+[node name="Sprite2" type="Sprite" parent="." index="1"]
+
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 20, 17, 24, 20 )
+_sections_unfolded = [ "Region" ]
+
+[node name="Sprite3" type="Sprite" parent="." index="2"]
+
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 50, 19, 21, 16 )
+_sections_unfolded = [ "Region" ]
+
+[node name="Sprite4" type="Sprite" parent="." index="3"]
+
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 77, 19, 21, 16 )
+_sections_unfolded = [ "Region" ]
+
+[node name="Sprite5" type="Sprite" parent="." index="4"]
+
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 53, 46, 75, 100 )
+_sections_unfolded = [ "Region" ]
+
+[node name="Sprite6" type="Sprite" parent="." index="5"]
+
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 133, 46, 70, 100 )
+_sections_unfolded = [ "Region" ]
+
+[node name="Sprite7" type="Sprite" parent="." index="6"]
+
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 133, 46, 70, 100 )
+_sections_unfolded = [ "Region" ]
+
+
